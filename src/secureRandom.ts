@@ -2,22 +2,22 @@ function generateSecureRandom() {
     try {
         if (typeof window === 'undefined') {
             /**
-             * @todo use Node API
              * https://nodejs.org/api/crypto.html#cryptogetrandomvaluestypedarray
              */
-
-            return Math.random()
+            const crypto = require('crypto')
+            const buffer = new Uint8Array(1)
+            crypto.getRandomValues(buffer)
+            return buffer[0] / (0xffffffff + 1)
         } else {
             /**
-             * @todo use Web API
              * https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues
              */
-
-            return Math.random()
+            const buffer = new Uint8Array(1)
+            window.crypto.getRandomValues(buffer)
+            return buffer[0] / (0xffffffff + 1)
         }
-    } catch {
+    } catch (error) {
         console.warn('Failed to generate secure random value, it returns Math.random()')
-    } finally {
         return Math.random()
     }
 }
