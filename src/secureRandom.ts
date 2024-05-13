@@ -27,6 +27,5 @@ function generateSecureRandom() {
 export function secureRandom(params: {min?: number; max?: number} = {}) {
     const {min, max} = getParameters(params)
 
-    console.log(generateSecureRandom())
     return generateSecureRandom() * (max - min) + min
 }
