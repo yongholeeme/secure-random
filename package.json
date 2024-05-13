@@ -7,7 +7,7 @@
     "types": "./dist/index.d.ts",
     "scripts": {
         "clean": "rm -rf ./dist",
-        "build": "tsc && vite build",
+        "build": "vite build",
         "test": "jest",
         "test:watch": "jest --watch",
         "format": "prettier --check '**/*.{ts,js,json}'",
