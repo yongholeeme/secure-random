@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "lib": ["ES2023"],
+        "module": "NodeNext",
+        "target": "ES2022",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "moduleResolution": "NodeNext",
+        "baseUrl": "./src",
+        "outDir": "./dist"
+    }
+}

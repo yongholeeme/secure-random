@@ -1,0 +1,26 @@
+{
+    "name": "@yongholeeme/secure-random",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "clean": "rm -rf ./dist",
+        "build": "tsc",
+        "test": "jest",
+        "test:watch": "jest --watch"
+    },
+    "keywords": [],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yongholeeme/secure-random.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jest": "^29.5.12",
+        "@types/node": "^20.12.11",
+        "jest": "^29.7.0",
+        "ts-jest": "^29.1.2",
+        "typescript": "^5.4.5"
+    }
+}
